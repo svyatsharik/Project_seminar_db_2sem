@@ -1,5 +1,0 @@
-CREATE TABLE category
-(
-    categoryID INTEGER UNIQUE PRIMARY KEY NOT NULL,
-    name VARCHAR(100) NOT NULL
-);
