@@ -151,7 +151,7 @@ INSERT INTO basket (basketID, buyerID, productID, count) VALUES
 (49, 9, 5, 2),
 (50, 13, 6, 1);
 
-INSERT INTO favorites (basketID, buyerID, productID, count) VALUES
+INSERT INTO favorites (favoritesID, buyerID, productID, count) VALUES
 (1, 20, 8, 2),
 (2, 17, 12, 4),
 (3, 5, 25, 1),
