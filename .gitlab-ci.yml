@@ -61,23 +61,20 @@ ddl scripts:
     # Флаг `--cat` отвечает за вывод запускаемого скрипта в консоль пайплайна
     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/create_scripts.sql" --cat
     - python3 ${PYPSQL} --file="${SCRIPTS_DIR}/insert_scripts.sql" --cat
-    - echo "Table 'guitar_shop_database.maker' sample:"
+    - echo "Table 'buyer' sample:"
     # Демонстрируем, что вставка прошла успешно. Флаг `--verbose` отвечает
     # за вывод в консоль результата запуска скрипта
-    - python3 ${PYPSQL} --sql="SELECT * FROM guitar_shop_database.maker LIMIT 3"
+    - python3 ${PYPSQL} --sql="SELECT * FROM buyer LIMIT 3"
       --verbose
-    - echo "Table 'guitar_shop_database.supply' sample:"
-    - python3 ${PYPSQL} --sql="SELECT * FROM guitar_shop_database.supply LIMIT
+    - echo "Table 'category' sample:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM category LIMIT
       3" --verbose
-    - echo "Table 'guitar_shop_database.product' sample:"
-    - python3 ${PYPSQL} --sql="SELECT * FROM guitar_shop_database.product LIMIT
+    - echo "Table 'product' sample:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM product LIMIT
       3" --verbose
-    - echo "Table 'guitar_shop_database.product_x_supply' sample:"
+    - echo "Table 'basket' sample:"
     - python3 ${PYPSQL} --sql="SELECT * FROM
-      guitar_shop_database.product_x_supply LIMIT 3" --verbose
-    - echo "Table 'guitar_shop_database.characteristic' sample:"
-    - python3 ${PYPSQL} --sql="SELECT * FROM guitar_shop_database.characteristic
+      basket LIMIT 3" --verbose
+    - echo "Table 'favorites' sample:"
+    - python3 ${PYPSQL} --sql="SELECT * FROM favorites
       LIMIT 3" --verbose
-    - echo "Table 'guitar_shop_database.product' sample:"
-    - python3 ${PYPSQL} --sql="SELECT * FROM guitar_shop_database.product LIMIT
-      3" --verbose
