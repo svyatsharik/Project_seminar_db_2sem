@@ -45,9 +45,9 @@ window w as (
 order by categoryid, price
 );
 
-select name, categoryid, price, lag(price, 1) OVER w, (price - lag(price, 1) OVER w) as delta
+select name, categoryid, price, lag(price, 1) over w, (price - lag(price, 1) over w) as delta
 from product
-WINDOW w AS (
+window w as (
 order by price
 )
 order by price;
