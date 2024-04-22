@@ -49,5 +49,4 @@ select name, categoryid, price, lag(price, 1) over w, (price - lag(price, 1) ove
 from product
 window w as (
 order by price
-)
-order by price;
+);
